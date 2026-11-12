@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: peguemonte-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/peguemonte_db
+    username: peguemonte_user
+    password: peguemonte_secret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
